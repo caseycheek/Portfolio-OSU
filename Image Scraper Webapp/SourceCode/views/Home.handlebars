@@ -1,0 +1,85 @@
+<section>
+    <form action="/result" method="post" class="row">
+        <div class="row">
+            <div class="col"><h4>Need a free image? </h4>
+                <label class="form-label" for="searchTerm"><h4>Enter the thing you'd like to see (required):</h4></label>
+                <input class="form-control" type="text" id="searchTerm" placeholder="Search Term" name="searchTerm">
+            </div> 
+            <div class="col"></div>
+        </div>
+        <p></p>
+        <div class="p-3 mb-2 bg-light text-dark"> <b>Optional parameters</b>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label" for="width">Specifiy width:</label>
+                    <input class="form-control" type="number" id="width" placeholder="Width (px)" name="width">
+                </div>
+
+                <div class="col">
+                    <label class="form-label" for="height"><b>or</b> specify height:</label>
+                    <input class="form-control" type="number" id="height" placeholder="Height (px)" name="height">
+                </div>
+            </div>
+            <p></p>
+            <div class="row">
+                <div class="col">
+                    Need to obscure this image?  Move the slider to select a level of pixelation. <b>Note: </b>The pixelation process may take a few seconds.
+                </div>
+            </div>
+            <p></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="static/kingfisher0.jpg" class="img-fluid img-thumbnail" alt="pix = 0">
+                    </div>
+                    <div class="col">
+                        <img src="static/kingfisher50.png" class="img-fluid img-thumbnail" alt="pix = 50">
+                    </div>
+                    <div class="col">
+                        <img src="static/kingfisher100.png" class="img-fluid img-thumbnail" alt="pix = 100">
+                    </div>
+                    <div class="col">
+                        <img src="static/kingfisher150.png" class="img-fluid img-thumbnail" alt="pix = 150">
+                    </div>
+                    <div class="col">
+                        <img src="static/kingfisher199.png" class="img-fluid img-thumbnail" alt="pix = 199">
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="pixelation" class="form-label">Pixelation Slider</label>
+                    <input type="range" class="form-range" min="0" max="199" value="0" id="pixelation" name="pixelation">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-primary btn-lg col-2">Submit</button>
+        </div>
+    </form>    
+</section>
+<p></p>
+<section>
+    <h3>How it works</h3>
+    <p>
+        Given a search term, the Image Scraper gets “the single most appropriate thumbnail associated with [a Wikipedia] article”, 
+        in part by using the PageImages property of MediaWiki’s API, 
+        <a href="https://www.mediawiki.org/wiki/Extension:PageImages">https://www.mediawiki.org/wiki/Extension:PageImages</a>,
+        and the PageProps property of MediaWiki's API, <a href="https://www.mediawiki.org/wiki/API:Pageprops">https://www.mediawiki.org/wiki/API:Pageprops</a>. 
+        Image pixelation is provided by Ian Ording’s Image Transformer Microservice 
+        (found here at <a href="https://image-pixelatorio.herokuapp.com/">https://image-pixelatorio.herokuapp.com/</a>). 
+        After retrieving the data, the Image Scraper will then display the requested image and its attribution details for you to download. 
+    </p>
+    <p><b>Note: </b>This service will only return free images under the public domain.</p>
+    <p></p>
+    <div class="row">
+        <div class="col"><h3>For advanced users, the Image Scraper is also available as a RESTful API.</h3></div>
+    </div>
+    <div class="row">
+        <div class="col">Click the button to see how to use it:</div>
+        <div class="col">
+            <a class="btn btn-primary btn-lg" href="/apidoc">API Documentation</a>
+        </div>
+        <div class="col"></div>
+    </div>
+</section>

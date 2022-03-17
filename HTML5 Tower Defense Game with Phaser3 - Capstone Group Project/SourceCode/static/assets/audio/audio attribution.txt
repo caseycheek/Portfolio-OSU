@@ -1,0 +1,98 @@
+-------------------------------------------------------------------------------
+
+Background music from Eric Taylor's Free-Music Pack, downloaded at 
+https://opengameart.org/content/eric-taylor-royalty-free-music-pack-50-songs-cc-by
+Released under the Attribution 4.0 International (CC BY 4.0).
+No changes were made.
+- chasing_theme.mp3
+- Determination_underfirev1.mp3
+- Horror_Adventure_v2.mp3
+- latin_soloist.mp3
+
+-------------------------------------------------------------------------------
+
+Sound effects from Kenney, downloaded at https://www.kenney.nl/assets?q=audio
+Released under the Attribution 4.0 International (CC BY 4.0).
+- footstep_carpet_004.ogg
+- footstep_snow_002.ogg
+- switch20.ogg
+- impactGlass_heavy_000.ogg
+- impactPlate_light_000.ogg
+
+-------------------------------------------------------------------------------
+
+Flamethrower sound effect from the Fire Staff Collection, by LEGIT Audio and 
+downloaded at https://opengameart.org/content/fire-staff-collection
+Released under CC0 1.0 Universal Public Domain
+- LEGIT_FIR_Fire_Staff 2-Audio.wav
+- LEGIT_FIR_Fire_Staff 8-Audio.wav
+
+-------------------------------------------------------------------------------
+
+Minimare enemy sound effects from Kevin O' Ryan
+Downloaded at https://opengameart.org/content/minimare-monster-sfx
+Released under CC-BY 3.0 License
+
+- Minimare_Hiss.wav
+- Minimare_Hurt.wav
+- Minimare_Die.wave
+
+-------------------------------------------------------------------------------
+
+Space enemy sound effects from Vinrax
+Downloaded at https://opengameart.org/content/space-creature-sfx-pack
+Released under CC-BY 3.0 License
+
+- space_creature_death.wav
+- space_creature_pain.wav
+- space_creature_special.wav
+
+-------------------------------------------------------------------------------
+
+Robot enemy sound effects from Little Robot Sound Factory
+www.littlerobotsoundfactory.com
+Downloaded at https://opengameart.org/content/voices-sound-effects-library
+Released under CC-BY 3.0 License
+
+- green_special.wav
+- green_death.wav
+- green_damage.wav
+- robo_special.wav
+- robo_death.wav
+- robo_damage.wav
+
+-------------------------------------------------------------------------------
+
+Victory sound effect from cynicmusic
+Downloaded at https://opengameart.org/content/victory-theme-for-rpg
+Released under CC0 1.0 Universal Public Domain
+
+- Victory.mp3
+
+-------------------------------------------------------------------------------
+
+Game over sound effect from Devlin Bataric
+Downloaded at https://opengameart.org/content/69-game-over-jingles-pack
+Released under the Attribution 4.0 International (CC BY 4.0).
+
+- game_over.wav
+
+-------------------------------------------------------------------------------
+
+Game start sound effect from ARoachIFoundOnMyPillow
+Downloaded at https://opengameart.org/content/victory-fanfare
+Released under CC-BY 3.0 License
+
+- fanfare.wave
+
+-------------------------------------------------------------------------------
+
+Game start sound effect from Botanic
+Downloaded at https://opengameart.org/content/polyverse-title
+Released under CC-BY 3.0 License
+
+- game_start.mp3
+
+
+
+

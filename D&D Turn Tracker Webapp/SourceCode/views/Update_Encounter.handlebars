@@ -1,0 +1,14 @@
+<form id="update-encounter" name='update-encounters' action="/encounters" method="post" class="row">
+    <div class="mb-3 col-4">
+        <label class="form-label">Round (required)</label>
+        <input type="number" class="form-control" id="round" name="round" value="{{selectedEncounter.round}}" required>
+    </div>
+
+    <div class="mb-3 col-4">
+        <label class="form-label">Setting</label>
+        <input type="text" class="form-control" id="setting" name="setting" value="{{selectedEncounter.setting}}">
+    </div>
+    <div>
+    <button type='submit' class="btn btn-primary btn-lg col-2" onclick="updateEncounter({{selectedEncounter.enID}})">Update</button>
+    </div>
+</form>

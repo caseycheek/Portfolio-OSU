@@ -1,0 +1,6 @@
+# Courtesy of supertommy at https://github/ourcade/phaser-3-parcel-template
+/.cache
+/dist
+/node_modules
+/package-lock.json
+/.DS_Store

@@ -1,0 +1,77 @@
+<table class="table table-dark table-striped w-50 p-3">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Initiative Bonus</th>
+            <th scope="col">Player Character?</th>
+            <th scope="col">Hostile to Players?</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each characters}}
+        <tr>
+            <td><a href="/characterdetails?charID={{charID}}">{{name}}</a></td>
+            <td>{{initiativeBonus}}</td>
+            <td>{{playerCharacter}}</td>
+            <td>{{hostileToPlayer}}</td>
+            <td><button onclick="deleteCharacter({{charID}})">Delete</button></td>
+            <td><a href="/characters/{{charID}}">Update</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<h1>Add a new Character:</h1>
+<form action='/characters' method='post' class="row">
+    <div class="mb-3 col-4">
+        <label class="form-label">Name (required)</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="mb-3 col-4">
+        <label class="form-label">Initiative Bonus (required)</label>
+        <input type="text" class="form-control" id="initiativeBonus" name="initiativeBonus" required>
+    </div>
+    <div class='container'>
+        <div class="row">
+            <div class='col-4'>
+                <div>
+                    <lable>Character Control (required):</lable>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playerCharacter" id="pc" value='1' required> 
+                    <label class="form-check-label" for="playerCharacter">
+                        Player Controlled Character
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="radio" name="playerCharacter" id="npc" value='0' required>
+                    <label class="form-check-label" for="playerCharacter">
+                        Non-Player Controlled Character
+                    </label>
+                </div>
+            </div>
+            <div class='col-4'>
+                <div>
+                    <lable>Hostile Towards (required):</lable>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hostileToPlayer" id="hostile" value='1' required>
+                    <label class="form-check-label" for="hostileToPlayer">
+                        Players
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="radio" name="hostileToPlayer" id="notHostile" value='0' required>
+                    <label class="form-check-label" for="hostileToPlayer">
+                        Non-Players
+                    </label>
+                </div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>

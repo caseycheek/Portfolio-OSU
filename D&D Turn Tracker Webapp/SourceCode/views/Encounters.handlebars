@@ -1,0 +1,38 @@
+<table class="table table-dark table-striped w-50 p-3">
+    <thead>
+        <tr>
+            <th scope="col">Encounter ID</th>
+            <th scope="col">Round</th>
+            <th scope="col">Setting</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each encounters}}
+        <tr>
+            <td><a href="/turnorder?enID={{enID}}">Encounter {{enID}}</a></td>
+            <td>{{round}}</td>
+            <td>{{setting}}</td>
+            <td><button onclick="deleteEncounter({{enID}})">Delete</button></td>
+            <td><a href="/encounters/{{enID}}">Update</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<h1>Add a new Encounter:</h1>
+<form action="/encounters" method="post" class="row">
+    <div class="mb-3 col-4">
+        <label class="form-label">Round (required)</label>
+        <input type="text" class="form-control" id="round" name="round" required>
+    </div>
+
+    <div class="mb-3 col-4">
+        <label class="form-label">Setting</label>
+        <input type="text" class="form-control" id="setting" name="setting">
+    </div>
+
+    <div class="col my-auto col-2">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+</form>

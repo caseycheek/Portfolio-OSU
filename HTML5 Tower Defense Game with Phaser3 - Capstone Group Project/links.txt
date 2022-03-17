@@ -1,0 +1,11 @@
+Original project requirements:
+https://eecs.oregonstate.edu/capstone/submission/pages/viewSingleProject.php?id=GDW51X9s8lFKZxoU
+
+Video presentation of my contributions: 
+https://youtu.be/DJnDreWejj8
+
+Cute game trailer/elevator pitch demonstrating an earlier version of the game: 
+https://youtu.be/sFSQFJphL84
+
+My development blog for this project:
+https://blogs.oregonstate.edu/selfisnotdefined/

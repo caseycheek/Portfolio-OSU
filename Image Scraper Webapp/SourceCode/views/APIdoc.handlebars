@@ -1,0 +1,45 @@
+<section>
+    <h3>The Image Scraper Microservice is also available as a RESTful API.</h3>
+    <p>
+        Simply send a request to the following address: <br>
+        <mark>http://flip3.engr.oregonstate.edu:3082/api?searchTerm=[your search term]</mark><br>
+        This will get an unpixelated version of the image at its original resolution.
+    </p>
+    <p>
+        Specify additional <b>optional</b> parameters by including:
+        <ul>
+            <li>
+                &width=[integer width in pixels] or &height=[integer height in pixels]
+                <ul>
+                    <li>
+                        Include only one of the two dimensions (defaults to width if both dimensions are included). The resulting image will be scaled to the specified dimension.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                &pixelation=[integer from 0 to 199]
+                <ul>
+                    <li>
+                        Setting this to 0 will result in no pixelation while 199 will produce an extremely pixelated image. The default setting is 0.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        You'll receive a URL to your image in JSON.
+    </p>
+    <p>
+        For example, request <mark>http://flip3.engr.oregonstate.edu:3082/api?searchTerm=apple&width=500</mark> and you'll receive:<br>
+        {<br>
+            "searchTerm":"apple",<br>
+            "fileName":"Malus_domestica_a1.jpg",<br>
+            "url":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Malus_domestica_a1.jpg/500px-Malus_domestica_a1.jpg",<br>
+            "width":500,<br>
+            "height":373,<br>
+            "descriptionURL":"https://commons.wikimedia.org/wiki/File:Malus_domestica_a1.jpg",<br>
+            "artist":"Opioła Jerzy (Poland)",<br>
+            "licenseShortName":"CC BY 2.5",<br>
+            "title":"Malus domestica a1",<br>
+            "pixelation": 0<br>
+        }
+    </p>
+</section>

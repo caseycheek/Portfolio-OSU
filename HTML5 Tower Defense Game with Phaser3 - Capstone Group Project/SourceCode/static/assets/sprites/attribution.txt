@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------
+
+Created by Casey Cheek:
+- pinkAlienWalkingV2.png
+- greenAlienWalking.png
+- turretBaseWood.png
+- yellowStripedGun.png
+- flamethrowerTurret.png
+- sniperTurret.png
+
+-------------------------------------------------------------------------------
+
+Modified by Jordan Irwin (AntumDeluge) and created by Kevin O'Ryan and DoubleU Creativity
+
+https://opengameart.org/content/minimare-rework
+https://opengameart.org/content/space-bot-rework
+Released under CC-BY 3.0 License
+
+- dark_minimare-001.png
+- minimare-001.png
+- minimare_robot-002.png
+
+- spacebot-green.png
+- spacebot-yellow.png
+
+-------------------------------------------------------------------------------
+
+Created by Elthen from Elthen Pixel Art Shop
+
+https://elthen.itch.io/2d-pixel-art-portal-sprites
+Released under CC BY-NC 4.0 License
+
+- purplePortal.png
+
+
+-------------------------------------------------------------------------------
+
+Created by LIXING
+
+https://opengameart.org/content/explosion-effect-pixel-art
+Released under CC-BY 4.0 License
+
+
+- explosion1.png
+- explosion2.png
+- explosion3.png
+- explosion4.png
+- explosion5.png
+
+-------------------------------------------------------------------------------
+
+Created by ashishlko11
+https://opengameart.org/users/ashishlko11
+Released under CC-BY 3.0 License
+
+- smoke.png
+- greenSmoke.png
+
+-------------------------------------------------------------------------------
+
+Created by JoesAlotofthings
+https://opengameart.org/users/joesalotofthings
+Released under CC-BY 3.0 License
+
+- star.png
+
+-------------------------------------------------------------------------------
+
+Created by Sinestesia
+https://opengameart.org/content/hit-animation-2-frame-by-frame
+Released under CC-BY 3.0 License
+
+- hit-yellow.png

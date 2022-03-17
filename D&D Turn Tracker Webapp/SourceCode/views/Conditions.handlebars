@@ -1,0 +1,36 @@
+<table class="table table-dark table-striped w-50 p-3">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Effect</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each conditions}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{effect}}</td>
+            <td><button onclick="deleteCondition({{conID}})">Delete</button></td>
+            <td><a href="/conditions/{{conID}}">Update</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<h1>Add a new Condition:</h1>
+<form action='/conditions' method='post' class="row">
+    <div class="mb-3 col-4">
+        <label class="form-label">Name (required)</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+
+    <div class="mb-3 col-4">
+        <label class="form-label">Effect</label>
+        <input type="text" class="form-control" id="effect" name="effect">
+    </div>
+    <p></p>
+    <div class="col">
+        <button type="submit" class="btn btn-primary btn-lg col-3">Submit</button>
+    </div>
+</form>

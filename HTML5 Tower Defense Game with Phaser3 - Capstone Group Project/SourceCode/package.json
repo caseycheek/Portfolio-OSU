@@ -1,0 +1,15 @@
+{
+    "name": "cs467-capstone-tower-defense",
+    "version": "1.0.0",
+    "description": "HTML5 Tower Defense Game Using Phaser 3",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "OSU",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "phaser": "^3.55.2"
+    }
+}

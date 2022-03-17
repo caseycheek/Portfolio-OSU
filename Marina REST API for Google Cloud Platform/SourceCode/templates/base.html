@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body {
+                background-color: #3a3c42;
+            }
+            .content {
+                background-color: #cfd7ec;
+                padding: 20px;
+                margin: 20px;
+                overflow-wrap: break-word;
+            }
+            footer {
+                background-color: #858997;
+                color: #ffffff;
+                padding: 20px;
+                margin: 20px;
+            }
+        </style>
+        {% if title %}
+        <title>{{title}}</title>
+        {% else %}
+        <title>CS493 - Final Project</title>
+        {% endif %}
+    </head>
+    <body>
+        <div class="content">{% block body %}{% endblock %}</div>
+        <footer>
+            <p>
+                Oregon State University<br>
+                CS493 - Final Project
+            </p>
+            <p>
+                Author: Casey Cheek<br>
+                Date: 12/3/21<br>
+                Description: You can use this application to generate JWTs <br>
+                with Auth0 as the JWT provider. When you click the button <br>
+                on the welcome page, you'll be asked to sign in or create <br>
+                a new account with Auth0. Afterwards, you'll be directed to<br>
+                the User Info page, which will display your newly generated<br>
+                JWT and your unique ID.
+            </p>
+        </footer>
+    </body>
+</html>

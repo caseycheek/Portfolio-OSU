@@ -1,0 +1,8 @@
+Author: Casey Cheek
+Project: Project 5, Wasteagram
+
+For this assignment, I have implemented the following extra credit features:
+
+	1.  The app bar of the List Screen displays the total sum of the number of wasted items in all post.
+	2.  The app notifies Sentry that an exception has occured when the "Throw Exception" button is tapped. You can find this button by tapping the bug icon on the right side of the app bar of the List Screen.
+	3.  The app uses Firebase in-app analytics to monitor application usage.

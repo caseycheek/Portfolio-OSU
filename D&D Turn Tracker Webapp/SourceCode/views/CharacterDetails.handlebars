@@ -1,0 +1,103 @@
+<div class="container">
+    <h6>Select a character from the drop down menu to display this character's conditions and items.</h6>
+</div>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Select Character
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        {{#each characters}}
+        <li><a class="dropdown-item" href="characterdetails?charID={{charID}}">Character #{{charID}}: {{name}}</a></li>
+        {{/each}}
+    </ul>
+</div>
+<h1>{{selectedCharacter.[0].name}}</h1>
+<table class="table table-dark table-striped w-50 p-3">
+    <caption>The selected character is affected by these conditions</caption>
+    <thead>
+        <tr>
+            <th scope="col">Condition Name</th>
+            <th scope="col">Effect</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each characterConditions}}
+        <tr>
+            <td>{{name}}</a></td>
+            <td>{{effect}}</td>
+            <td><button onclick="deleteConChar({{conID}}, {{../charID}})">Remove</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+<table class="table table-dark table-striped w-50 p-3">
+    <caption>The selected character is holding these items</caption>
+    <thead>
+        <tr>
+            <th scope="col">Item Name</th>
+            <th scope="col">Effect</th>
+            <th scope="col">Type</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Is it Magic?</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each characterItems}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{effect}}</td>
+            <td>{{type}}</td>
+            <td>{{quantity}}</td>
+            <td>{{isMagic}}</td>
+            <td>
+                <form action='/characterdetails' method="post">
+                    <input type="hidden" name="itemID" value="{{itemID}}">
+                    <input type='hidden' name='charID' value="{{../charID}}">
+                    <input type="submit" name="removeItem" value="Remove">
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+{{#if charID}}
+<h1>Add a Condition to this Character:</h1>
+<form action='/characterdetails' method='post' class="row">
+    <div class="col-4">
+        <label class="form-label">Condition</label>
+        <select class="form-select" aria-label="Default select example" name="conID" required>
+            {{#each availableConditions}}
+            <option value="{{conID}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <input type='hidden' name='charID' value="{{charID}}">
+    <input type='hidden' name='addCondition' value='addCondition'>
+    <div class="col my-auto col-2">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+</form>
+
+<h1>Add an Item to this Character:</h1>
+<form action='/characterdetails' method='post' class="row">
+    <div class="col-4">
+        <label class="form-label">Item</label>
+        <select class="form-select" aria-label="Default select example" name='itemID' required>
+            {{#each availableItems}}
+            <option value="{{itemID}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <input type='hidden' name='charID' value="{{charID}}">
+    <input type='hidden' name='addItem' value='addItem'>
+    <div class="col my-auto col-2">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+</form>
+{{/if}}

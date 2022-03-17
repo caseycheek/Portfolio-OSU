@@ -1,0 +1,59 @@
+<form id='update-character' name='update-character' class="row">
+    <div class="mb-3 col-4">
+        <label class="form-label">Name (required)</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{selectedCharacter.name}}" required>
+    </div>
+
+    <div class="mb-3 col-4">
+        <label class="form-label">Initiative Bonus (required)</label>
+        <input type="number" class="form-control" id="initiativeBonus" name="initiativeBonus"
+            value="{{selectedCharacter.initiativeBonus}}" required>
+    </div>
+
+    <div class='container'>
+        <div class="row">
+            <div class='col-4'>
+                <div>
+                    <lable>Character Control:</lable>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="playerCharacter" id="pc" value='1' {{checkedTrue
+                        selectedCharacter.playerCharacter}}>
+                    <label class="form-check-label" for="playerCharacter">
+                        Player Controlled Character
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="radio" name="playerCharacter" id="npc" value='0'
+                        {{checkedFalse selectedCharacter.playerCharacter}}>
+                    <label class="form-check-label" for="playerCharacter">
+                        Non-Player Controlled Character
+                    </label>
+                </div>
+            </div>
+            <div class='col-4'>
+                <div>
+                    <lable>Hostile Towards:</lable>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="hostileToPlayer" id="hostile" value='1'
+                        {{checkedTrue selectedCharacter.hostileToPlayer}}>
+                    <label class="form-check-label" for="hostileToPlayer">
+                        Players
+                    </label>
+                </div>
+                <div>
+                    <input class="form-check-input" type="radio" name="hostileToPlayer" id="notHostile" value='0'
+                        {{checkedFalse selectedCharacter.hostileToPlayer}}>
+                    <label class="form-check-label" for="hostileToPlayer">
+                        Non-Players
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button type='submit' class="btn btn-primary btn-lg col-2"
+            onclick="updateCharacter({{selectedCharacter.charID}})">Update</button>
+    </div>
+</form>

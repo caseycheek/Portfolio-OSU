@@ -1,0 +1,57 @@
+<h6>Select an encounter from the dropdown menu to view the turn order.</h6>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Select Encounter
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        {{#each encounters}}
+        <li><a class="dropdown-item" href="turnorder?enID={{enID}}">Encounter {{enID}}</a></li>
+        {{/each}}
+    </ul>
+</div>
+<table class="table table-dark table-striped w-50 p-3">
+    <thead>
+        <tr>
+            <th scope="col">Character Name</th>
+            <th scope="col">Initiative Total</th>
+            <th scope="col">Hostile to Players</th>
+            <th scope="col">Conditions</th>
+            <th scope="col">Player Character</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each encounter_characters}}
+        <tr>
+            <td><a href="/characterdetails?charID={{charID}}">{{name}}</a></td>
+            <td>{{initiativeTotal}}</td>
+            <td>{{hostileToPlayer}}</td>
+            <td>{{conName}}</td>
+            <td>{{playerCharacter}}</td>
+            <td><button onclick="deleteTurn({{charID}}, {{enID}})">Remove</button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{#if enID}}
+<h1>Add a Character to the Encounter:</h1>
+<form action="/turnorder" method="post"class="row">
+    <div class="col-4">
+        <label class="form-label">Character</label>
+        <select class="form-select" aria-label="Default select example" name="charID" required>
+            {{#each availableCharacters}}
+            <option value="{{charID}}">{{name}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="mb-3 col-2">
+        <label class="form-label">Initiative Roll</label>
+        <input type="number" class="form-control" id="initiativeRoll" name="initiativeRoll" required>
+    </div>
+    <input type='hidden' name='enID' value="{{enID}}">
+    <div class="col my-auto col-2">
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+</form>
+{{/if}}
